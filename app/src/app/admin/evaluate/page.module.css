@@ -1,0 +1,443 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+.supportButton {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.safetyButton {
+  position: fixed;
+  left: 16px;
+  bottom: 32px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.safetyButton span {
+  margin-left: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.priceCard {
+  width: 95%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.priceInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.amount {
+  font-size: 32px;
+  font-weight: 500;
+  color: #FF6B00;
+  display: flex;
+  align-items: baseline;
+}
+
+.currency {
+  font-size: 14px;
+  margin-left: 4px;
+  margin-top: 10px;
+}
+
+.discount {
+  font-size: 14px;
+  color: #FF5810;
+  /* margin-top: 1px; */
+}
+
+.detailLink {
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  background-color: #E0E0E0;
+  margin: 16px 0;
+}
+
+.driverInfo {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.driverBasic {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.avatarContainer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4285F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.driverDetails {
+  flex: 1;
+}
+
+.plateNumber {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.carInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.driverName {
+  font-size: 14px;
+  color: #666;
+}
+
+.separator {
+  color: #E0E0E0;
+}
+
+.carModel {
+  font-size: 14px;
+  color: #666;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ratingText {
+  font-size: 14px;
+  color: #666;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: #FFC107;
+  font-size: 14px;
+}
+
+.ratingScore {
+  font-size: 14px;
+  color: #FF5722;
+}
+
+.callButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4285F4;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ratingSection {
+  margin-bottom: 20px;
+}
+
+.ratingBox {
+  width: 95%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  z-index: 10;
+}
+
+.driverCard {
+  width: 95%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 125px;
+  background: white;
+  padding: 16px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.ratingTitle {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  padding: 16px;
+  font-family: 'PingFang SC';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #333333;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.niming{
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #E3E3E3;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 4px;
+  color: #919191;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.ratingStars {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  color: #E0E0E0;
+  font-size: 25px;
+  line-height: 20px;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.ratingTags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.ratingTag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: #F5F5F5;
+  border-radius: 16px;
+}
+
+.tagStar {
+  color: #FF6B00;
+  font-size: 14px;
+}
+
+.ratingTag span:last-child {
+  color: #666666;
+  font-family: 'PingFang SC';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.ratingComment {
+  color: #666666;
+  font-family: 'PingFang SC';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.shareButton {
+  flex: 1;
+  padding: 8px;
+  background-color: #F5F5F5;
+  color: #333;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.reportButton {
+  flex: 1;
+  padding: 8px;
+  background-color: #FF4D4F;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reportButton:hover {
+  background-color: #FF7875;
+}
+
+.shareButton:hover {
+  background-color: #E8E8E8;
+}
+
+.hr{
+  width: 100%;
+  height: 1.5px;
+  background-color: #E0E0E0;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.mainPrice {
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.payButton {
+  flex: 1;
+  padding: 8px;
+  color: #C5C7C5;
+  border: 1px solid #C5C7C5;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reportButton:hover {
+  background-color: #FF7875;
+}
+
+.mainPriceBox{
+  display: flex;
+  align-items: center;
+}
+  
+
+
+
+
+.mapContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #ff4d4f;
+  z-index: 2;
+} 

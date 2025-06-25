@@ -1,0 +1,318 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* 确保 html 和 body 占满整个高度 */
+  width: 100%;
+  box-sizing: border-box; /* 全局应用 border-box */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* 确保所有元素继承 border-box */
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.header {
+    height: 68px;
+    width: 100%;
+}
+
+.hed{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top:-40px;
+    color: white;
+}
+
+.header-icon {
+    width: 25px;
+    position: relative;
+    left: 25px;
+}
+
+.header-title {
+    font-size: 18px;
+    margin: 0;
+}
+
+.header-spacer {
+    width: 22px;
+}
+
+/* 搜索栏动画 */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%); /* 从顶部完全隐藏 */
+    }
+    to {
+        transform: translateY(0); /* 滑到正常位置 */
+    }
+}
+
+.search-section {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    padding: 0 15px;
+    z-index: 10;
+    animation: slideInFromTop 0.3s ease-out forwards; /* 应用动画 */
+}
+
+.search-box {
+    background-color: white;
+    border-radius: 4px;
+    padding: 4px 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-icon {
+    margin-left: -2px;
+    margin-right: 14px;
+    width: 20px;
+    height: 22px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 14px;
+    color: #666;
+    padding: 0;
+}
+
+.map-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* 底部元素动画 */
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%); /* 从底部完全隐藏 */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* 滑到正常位置 */
+        opacity: 1;
+    }
+}
+
+.safety-center-float {
+    position: absolute;
+    bottom: 338px; /* 根据中间部分和底部弹出框的高度调整 */
+    left: 15px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1px 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    z-index: 50; /* 高于中间部分 */
+    height: 30px; /* 明确的高度 */
+    animation: slideInFromBottom 0.3s ease-out forwards;
+    animation-delay: 0.1s; /* 稍微延迟，使其看起来更自然 */
+}
+
+.safety-center-float .safety-center-icon {
+    margin-right: 6px;
+}
+
+.safety-center-float .safety-center-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+
+.safety-center-content {
+    display: flex;
+    align-items: center;
+}
+
+.safety-center-icon {
+    font-size: 20px;
+    color: #1E88E5;
+    margin-right: 10px;
+}
+
+.safety-center-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.safety-center-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.view-button {
+    background-color: #1E88E5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.middle-section {
+    position: absolute;
+    bottom: 292px; /* 根据底部弹出框的高度调整 */
+    left: 15px;
+    right: 15px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: bottom 0.3s ease-out;
+    z-index: 40; /* 高于底部弹出框 */
+    height: 40px;
+    box-sizing: border-box;
+    animation: slideInFromBottom 0.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.middle-section .middle-section-text {
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.location-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.location-dot-blue {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #1E88E5;
+    margin-right: 10px;
+}
+
+.location-title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.location-subtitle {
+    font-size: 11px;
+    color: #888;
+}
+
+.destination-input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.location-dot-green {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    margin-right: 10px;
+}
+
+.line{
+    height: 2.5px;
+    width: 300px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+}
+
+.pting{
+    background-color: white;
+    height: 120px;
+    margin-top: 3px;
+    padding: 21px;
+    border-radius: 5px;
+}
+
+.where{
+    color: rgb(146, 146, 146);
+    font-size: 15px;
+}
+
+.home-company-section {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 7px;
+    background-color: white;
+    justify-content: space-around;
+}
+
+.home{
+    width: 80px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.company{
+    width: 120px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.home-company-icon {
+    font-size: 22px;
+    margin-top: 6px;
+}
+
+.home-company-title {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.home-company-subtitle {
+    font-size: 10px;
+    color: #888;
+}
+
+.bottom-popup {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; /* 定位在最底部 */
+    height: 309px; /* 根据内容估算的高度 */
+    border-radius: 4px;
+    padding: 20px 15px;
+    z-index: 30; /* 底部元素中最低的 z-index */
+    animation: slideInFromBottom 0.5s ease-out forwards;
+    animation-delay: 0.3s;
+}

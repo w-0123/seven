@@ -1,0 +1,422 @@
+.container {
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+  /* 确保内边距不会增加总宽度 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* 添加阴影 */
+}
+
+.title {
+  font-size: 16px;
+  /* 稍微小一点，以获得更好的平衡 */
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+  transform: translateX(-7px);
+  /* 精细调整以使标题居中 */
+  font-weight: 500;
+  /* 中等粗细 */
+  color: #333;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  /* 增加各部分之间的间距 */
+  width: 100%;
+  padding: 0 30px;
+  /* 调整内容的水平内边距 */
+  box-sizing: border-box;
+}
+
+.main-title {
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: -14px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.4;
+}
+
+.sub-text {
+  font-size: 13px;
+  /* 稍微小一点 */
+  color: #666;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+  margin-bottom: 45px;
+}
+
+.face-recognition-area {
+  position: relative;
+  width: 200px;
+  /* 外圆的精确宽度 */
+  height: 200px;
+  /* 外圆的精确高度 */
+  background-color: #e8e8e8;
+  /* 浅灰色背景 */
+  border-radius: 50%;
+  /* 完美圆形 */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  /* 移除阴影 */
+}
+
+.camera-feed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  /* 确保视频流也是圆形 */
+}
+
+.camera-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+}
+
+.coordinate-icon {
+  width: 50px;
+  /* 调整坐标系图标的大小 */
+  height: 50px;
+  color: #fff;
+  /* 白色图标颜色 */
+}
+
+.user-info {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  text-align: center;
+  margin-top: -8px;
+  /* 调整间距 */
+  margin-bottom: 70px;
+}
+
+.user-phone {
+  font-weight: bold;
+  color: rgb(45, 131, 251);
+}
+
+.alert-message {
+  display: flex;
+  align-items: flex-start;
+  /* 图标与文本顶部对齐 */
+  gap: 8px;
+  /* 稍微减小间距 */
+  padding: 10px 10px;
+  /* 调整内边距 */
+  border-radius: 8px;
+  /* 更圆的角 */
+  width: 100%;
+  max-width: 320px;
+  /* 根据需要调整最大宽度 */
+  color: #2196f3;
+  /* 蓝色文本颜色 */
+  box-sizing: border-box;
+}
+
+.alert-icon {
+  width: 18px;
+  /* 稍微小一点的图标 */
+  height: 18px;
+  color: rgb(45, 131, 251);
+  /* 蓝色图标颜色 */
+  flex-shrink: 0;
+}
+
+.nowUser {
+  color: black;
+  margin-right: 5px;
+}
+
+.ren {
+  font-size: 10px;
+  color: rgb(255, 88, 14);
+  line-height: 18px;
+}
+
+.controls-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 320px;
+  /* 与提示信息宽度匹配 */
+  margin-top: -12px;
+  /* 调整间距 */
+}
+
+.verify-button {
+  padding: 14px 20px;
+  /* 调整内边距以控制高度 */
+  border: none;
+  border-radius: 25px;
+  /* 更圆的角 */
+  background-color: rgb(45, 131, 251);
+  /* 蓝色按钮 */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+  /* 微妙的阴影 */
+}
+
+.verify-button:hover:not(:disabled) {
+  background-color: #1976d2;
+}
+
+.verify-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 动画类 (保持不变或根据需要调整) */
+.bounce-in-right-delay-1 {
+  animation: bounceInRight 0.6s ease-out;
+}
+
+.bounce-in-right-delay-2 {
+  animation: bounceInRight 0.6s ease-out 0.1s;
+}
+
+.bounce-in-right-delay-3 {
+  animation: bounceInRight 0.6s ease-out 0.2s;
+}
+
+.bounce-in-right-delay-4 {
+  animation: bounceInRight 0.6s ease-out 0.3s;
+}
+
+.bounce-in-right-delay-5 {
+  animation: bounceInRight 0.6s ease-out 0.4s;
+}
+
+.bounce-in-right-delay-6 {
+  animation: bounceInRight 0.6s ease-out 0.5s;
+}
+
+.bounce-in-right-delay-7 {
+  animation: bounceInRight 0.6s ease-out 0.6s;
+}
+
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 新增样式 (保持不变或根据需要调整) */
+.detection-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #28a745;
+  transition: width 0.3s ease;
+}
+
+.head-pose-info {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: -80px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.head-pose-info p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.detection-steps {
+  margin-top: 10px;
+}
+
+.detection-steps p {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.detection-steps ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detection-steps li {
+  font-size: 14px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 状态消息样式 */
+.status-message {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.status-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* 新增：张嘴检测进度条样式 */
+.mouth-detection-progress {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mouth-progress {
+  background-color: #fd7e14;
+}
+
+.mouth-value {
+  font-size: 12px;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* 新增：验证步骤显示样式 */
+.verification-steps {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin: -50px 0 10px 0;
+  opacity: 0; /* 初始状态设为透明 */
+}
+
+/* 当添加 show-steps 类时，应用动画 */
+.verification-steps.show-steps {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.7s; /* 页面加载后延迟显示 */
+}
+
+.verification-steps .step {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  padding: 8px 5px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  color: #666;
+  margin: 0 3px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.verification-steps .step:nth-child(1) {
+  animation: stepBounceIn 0.5s ease-out 0.8s forwards;
+}
+
+.verification-steps .step:nth-child(2) {
+  animation: stepBounceIn 0.5s ease-out 0.9s forwards;
+}
+
+.verification-steps .step:nth-child(3) {
+  animation: stepBounceIn 0.5s ease-out 1.0s forwards;
+}
+
+.verification-steps .step.active {
+  background-color: #2196f3;
+  color: white;
+  font-weight: bold;
+}
+
+.verification-steps .step.completed {
+  background-color: #2196f3;
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stepBounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,191 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+.mapWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.cancelCard {
+  width: 95%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cancelStatus {
+  margin-bottom: 24px;
+}
+
+.statusTitle {
+  width: 338px;
+  height: 40px;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: 'PingFang SC';
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.statusDesc {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.orderInfo {
+  margin-bottom: 24px;
+}
+
+.timeInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.locationInfo {
+  margin-bottom: 12px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.location:last-child {
+  margin-bottom: 0;
+}
+
+.blueDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4285F4;
+  flex-shrink: 0;
+}
+
+.greenDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #34A853;
+  flex-shrink: 0;
+}
+
+.verticalLine {
+  width: 1px;
+  height: 20px;
+  background-color: #E0E0E0;
+  margin-left: 3.5px;
+}
+
+.locationText {
+  font-size: 14px;
+  color: #333;
+}
+
+.distanceInfo {
+  font-size: 12px;
+  color: #999;
+}
+
+.newOrderButton {
+  width: 100%;
+  padding: 8px;
+  background-color: #1A73E8;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.newOrderButton:hover {
+  background-color: #1557B0;
+} 
+
+
+
+
+.mapContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #ff4d4f;
+  z-index: 2;
+} 

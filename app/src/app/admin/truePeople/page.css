@@ -1,0 +1,249 @@
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.container {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px; /* 调整垂直内边距 */
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* 稍微更明显的阴影 */
+  position: relative;
+  justify-content: center;
+  opacity: 0; /* 确保初始隐藏 */
+  position: relative;
+}
+
+.back-arrow{
+  position:absolute;
+  left:25px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-section {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* 稍微更明显的阴影 */
+  opacity: 0; /* 确保初始隐藏 */
+  animation-delay: 0.3s;  /* 移除此延迟 */
+}
+
+.main-info-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.sub-info-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.form-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 20px;
+  /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);*/ /* 已移除此属性 */
+  padding-bottom: 20px;
+  opacity: 0; /* 确保初始隐藏 */
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  gap: 10px; /* 添加标签和输入框之间的间距 */
+}
+
+.form-group:not(:first-child) {
+  border-top: 1px solid #f2f2f2; /* 分隔线使用更浅的边框 */
+}
+
+.label {
+  width: 80px;
+  font-size: 15px;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.input-field {
+  flex-grow: 1;
+  border: 1px solid #e5e5e5; /* 更浅的边框 */
+  padding: 8px 12px;
+  width: 260px;
+  font-size: 15px;
+  color: #333;
+  outline: none;
+  border-radius: 4px;
+}
+
+.input-field::placeholder {
+  color: #b0b0b0;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block; /* 确保它在单独的行显示 */
+}
+
+.nameCard{
+    margin-left: 170px;
+}
+
+.document-type-group {
+  position: relative; /* 确保下拉菜单相对于此元素定位 */
+}
+
+.document-type-group .document-type-input {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e5e5e5; /* 更浅的边框 */
+  padding: 8px 12px;
+  color: #b0b0b0;
+  border-radius: 4px;
+}
+
+.document-type-group .arrow {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 78%; /* 定位在输入框下方 */
+  right: 0;
+  width: 90px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  z-index: 100; /* 确保下拉菜单在最上层 */
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.2s ease-out, transform 0.3s ease-out;
+  pointer-events: none; /* 隐藏时不允许点击 */
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* 显示时允许点击 */
+}
+
+.card1 {
+  padding: 10px 12px; /* 应用到每个列表项 */
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.card1:hover {
+  background-color: #f0f0f0;
+}
+
+.card1:not(:last-child) {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.next-step-button {
+  width: calc(100% - 0px); /* 调整为占据表单区域内边距内的全部宽度 */
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 22px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 0;
+  outline: none;
+  opacity: 0; /* 确保初始隐藏 */
+}
+
+.next-step-button:hover {
+  background-color: #1558b0;
+}
+
+.fade-in-animation.header-animation {
+  animation: bounceInRight 1s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.fade-in-animation.info-section-animation {
+  animation: bounceInRight 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.fade-in-animation.form-section-animation {
+  animation: bounceInRight 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.fade-in-animation.button-animation {
+  animation: bounceInRight 1s ease-out forwards;
+  animation-delay: 0.7s;
+}
